@@ -3,11 +3,5 @@
 go day part:
   cargo run --release {{day}} {{part}}
 
-release:
-  cargo build --release    
-
-lint:
-  cargo clippy
-
-bin:
-  cargo run --bin bin -- arg1
+test day:
+  cargo watch -x 'test -- day_{{day}}'
