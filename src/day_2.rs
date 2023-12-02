@@ -33,7 +33,6 @@ fn part_1(input: &str) -> usize {
 
         for capture in red_captures {
             let nr = capture.get(1).unwrap().as_str();
-            //println!("{nr} red");
             if nr.parse::<usize>().unwrap() > limits.red {
                 continue 'line;
             }
@@ -53,8 +52,6 @@ fn part_1(input: &str) -> usize {
 
         let regex = Regex::new(r".* (\d*): .*").unwrap();
         let id = regex.captures(line).unwrap().get(1).unwrap().as_str();
-
-        //println!("ID {id}");
 
         sum += id.parse::<usize>().unwrap();
     }
