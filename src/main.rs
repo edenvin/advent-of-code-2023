@@ -1,4 +1,5 @@
 mod day_1;
+mod day_2;
 
 use std::env;
 use std::fs::read_to_string;
@@ -28,6 +29,7 @@ fn main() {
 
     let answer = match day_number.as_str() {
         "1" => day_1::run(&input, part),
+        "2" => day_2::run(&input, part),
         _ => todo!(),
     };
 
